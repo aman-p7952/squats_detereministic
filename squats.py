@@ -32,7 +32,7 @@ def knee_position(frame):
     right_knee_y=frame[14*2+1] #14
     left_ankle_y=frame[15*2+1] #15
     leg_height=left_ankle_y-left_knee_y
-    if abs(left_knee_y-right_knee_y)<2*leg_height:
+    if abs(left_knee_y-right_knee_y)<0.5*leg_height:
         return True
     else:
         return False
